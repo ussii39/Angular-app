@@ -1,4 +1,22 @@
-<div>
-  {{ todo.title }}
+<form class="form">
+  <input
+    type="text"
+    name="title"
+    [(ngModel)]="title"
+    placeholder="文字を入力して下さい"
+  />
+  <input type="submit" value="Submit" (click)="onSubmit()" />
+</form>
+
+<div class="conatiner" (click)="onSelete(todo)">
   {{ todo.id }}
+  {{ todo.title }}
+  <button class="title" (click)="onDelete(todo)">削除</button>
+</div>
+
+<div class="detail" *ngIf="selectedTodo">
+  {{ selectedTodo.id }}
+
+  {{ selectedTodo.title }}
+  <button (click)="onDetail()">詳細へ</button>
 </div>

@@ -5,7 +5,7 @@ import { TodoComponent } from './todo.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [TodoComponent],
+  declarations: [],
   imports: [CommonModule, HttpClientModule],
 })
 export class TodoComponentModule {}

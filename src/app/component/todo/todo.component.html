@@ -1,3 +1,10 @@
-<div *ngFor="let todo of todos" [todo]="todo">
-  {{ todo.id }}
+<app-todo-item
+  *ngFor="let todo of todos"
+  [todo]="todo"
+  (DeleteClick)="onDelete($event)"
+  (addTodo)="addTodo($event)"
+>
+</app-todo-item>
+<div class="router" routerLink="/todo" routerLinkActive="active">
+  planへ遷移します
 </div>
